@@ -1,0 +1,58 @@
+# — SETTINGS — #
+background no
+update_interval 2
+cpu_avg_samples 2
+net_avg_samples 2
+double_buffer yes
+no_buffers yes
+text_buffer_size 1024
+
+# — WINDOW — #
+own_window yes
+own_window_type override
+own_window_transparent yes
+own_window_hints undecorate,sticky,skip_taskbar,skip_pager,below
+
+# — BORDER — #
+border_inner_margin 1
+border_outer_margin 1
+
+# — SIZE — #
+minimum_size 250
+maximum_width 250
+
+# — ALIGNMENT — #
+alignment tr
+gap_x 40
+gap_y 220
+
+# — GRAPHIC — #
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+#default_bar_size 40 8
+#default_shade_color
+#own_window_colour 808080
+
+# — TEXT — #
+use_xft yes
+xftfont Dejavu Sans:size=6
+xftalpha 0.8
+uppercase no
+override_utf8_locale yes
+default_color ccc
+
+# — LUA — #
+#lua_load ~/Conky/bgcolor/bg.lua
+#lua_draw_hook_pre conky_draw_bg
+
+# — Colors — #
+color1 C18C24
+
+TEXT
+${font  Impact:size=9}CPU 
+${voffset -3}${font Impact:size=16}$color1${goto 30}${cpu cpu0}${goto 45}${color1}%${color1}
+${font  Impact:size=16}${goto 90}${voffset -10}${top name 1}${alignr}${top cpu 1}$color
+${font  Impact:size=14}${goto 90}${top name 2}${alignr}${top cpu 2}
+${font  Impact:size=10}${goto 90}${top name 3}${alignr}${top cpu 3}
